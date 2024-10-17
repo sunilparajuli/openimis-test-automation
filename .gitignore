@@ -1,0 +1,36 @@
+# Byte-compiled / compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Robot Framework logs and reports
+*.html
+*.xml
+*.log
+output/
+results/
+log.html
+report.html
+output.xml
+
+# Environment files
+.env
+
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python dependency files
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+*.png
