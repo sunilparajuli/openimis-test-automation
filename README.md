@@ -1,6 +1,7 @@
 # Robot Framework OpenIMIS Automation
 
 This project contains automated test cases for the OpenIMIS platform using **Robot Framework** and **SeleniumLibrary**. It covers workflows such as login, navigating health facilities, creating claims, and inputting insurance and service data. 
+Currently this repository serves as **Prototype** for testing. 
 
 ## What is Robot Framework?
 
