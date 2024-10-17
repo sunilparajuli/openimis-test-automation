@@ -30,6 +30,9 @@ Login and Verify Home Page
 
 
 
+---
+
+## Usage
 
 Installation Instructions
 Follow these steps to set up the environment and run the tests.
