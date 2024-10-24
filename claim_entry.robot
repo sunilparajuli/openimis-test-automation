@@ -18,14 +18,15 @@ ${LOOP_COUNT}               1       # Number of iterations for the test case loo
 *** Keywords ***
 Initialize Environment Variables
     [Documentation]  Load environment variables from the .env file and set them as suite variables.
-    ${url}=                   Get Env Variable    URL
-    ${username}=              Get Env Variable    USERNAME
-    ${password}=              Get Env Variable    PASSWORD
-    ${health_facilities_url}= Get Env Variable    HEALTH_FACILITY_URL
-    Set Suite Variable    ${url}
-    Set Suite Variable    ${username}
-    Set Suite Variable    ${password}
-    Set Suite Variable    ${health_facilities_url}
+    ${URL}=                   Get Env Variable    URL
+    ${USERNAME}=              Get Env Variable    USERNAME
+    ${PASSWORD}=              Get Env Variable    PASSWORD
+    ${HEALTH_FACILITIES_URL}=    Get Env Variable    HEALTH_FACILITY_URL
+    Set Suite Variable    ${URL}
+    Set Suite Variable    ${USERNAME}
+    Set Suite Variable    ${PASSWORD}
+    Set Suite Variable    ${HEALTH_FACILITIES_URL}
+    Log    ${HEALTH_FACILITIES_URL}    # Log the health facility URL
 
 Open Application
     [Documentation]  Open the application in the browser and maximize the window.
@@ -89,7 +90,7 @@ Select Service And Quantity
     Input Text    xpath=//input[@placeholder='Search Service…']    ""
     Sleep    3s
     Click Element    xpath=//li[contains(text(), 'M1 OBG Cervical Cerclage - Shrodikar')]
-    Wait Until Element Is Visible    xpath=//tr[@class='MuiTableRow-root jss348']//input[@type='number' and @max='10000']    5s
+    Wait Until Element Is Visible    xpath=//tr[@class='MuiTableRow-root jss348']//input[@type='number' and @max='10000']    10s
     Click Element    xpath=//tr[@class='MuiTableRow-root jss348']//input[@type='number' and @max='10000']
     Press Keys    xpath=//tr[@class='MuiTableRow-root jss348']//input[@type='number' and @max='10000']    BACKSPACE
     Press Keys    xpath=//tr[@class='MuiTableRow-root jss348']//input[@type='number' and @max='10000']    1
@@ -152,6 +153,6 @@ Login and Complete Insurance Form
         Input Text Into Explanation
         Sleep    2s
         Click Save Button
-        Sleep    10s
+        Sleep    3s
     END
     Navigate
